@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Quiz</title>
+</head>
+<body>
+
+<h2>Quiz Time!</h2>
+
+<p id="question">
+    What is the capital of India?
+</p>
+
+<input type="text" id="answer" placeholder="Enter your answer">
+<br><br>
+
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+    function checkAnswer() {
+        const correctAnswer = "new delhi";
+        const userAnswer = document.getElementById("answer").value.toLowerCase();
+
+        if (userAnswer === correctAnswer) {
+            document.getElementById("result").innerText = "✅ Correct Answer!";
+        } else {
+            document.getElementById("result").innerText = "❌ Wrong Answer. Try again!";
+        }
+    }
+</script>
+
+</body>
+</html>
